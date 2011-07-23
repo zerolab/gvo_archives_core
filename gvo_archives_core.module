@@ -1,0 +1,27 @@
+<?php
+
+include_once('gvo_archives_core.features.inc');
+
+/**
+ * Implementation of hook_menu()
+ */
+function gvo_archives_core_menu() {
+	$items = array();
+	
+	// blank frontpage placeholder
+	$items['front'] = array(
+		'page callback'			=> 'gvo_archives_core_frontpage',
+		'access arguments'	=> array('access content'),
+		'type'	=> MENU_CALLBACK
+	);
+	
+	return $items;
+}
+
+/**
+ * Frontpage callback function
+ * @return	empty string
+ */
+function gvo_archives_core_frontpage() {
+	return '';
+}
